@@ -97,3 +97,18 @@ function updateCart() {
   cartCount.textContent = itemCount;
   total.textContent = sum;
 }
+
+
+let checkoutBtn = document.getElementById("checkoutBtn");
+
+checkoutBtn.addEventListener("click", function() {
+
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+    } else {
+        alert("Order placed successfully!");
+        cart = [];
+        displayCart();
+    }
+
+});
