@@ -93,3 +93,56 @@ nav a:hover {
 .btn:hover {
     background: #e56700;
 }
+
+
+.page {
+    min-height: calc(100vh - 70px);
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.page h1 {
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.page h1 span {
+    color: #ff7a00;
+}
+
+.page > p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+    color: #ccc;
+    font-size: 18px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.card {
+    width: 280px;
+    padding: 30px;
+    background: #151b2e;
+    border-radius: 8px;
+}
+
+.card h2 {
+    color: #ff7a00;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.prize {
+    margin-top: 50px;
+    color: #ff7a00;
+}
