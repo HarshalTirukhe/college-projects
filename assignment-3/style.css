@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    padding: 40px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+input {
+    width: 220px;
+}
+
+textarea {
+    width: 130px;
+    height: 45px;
+    resize: none;
+    vertical-align: middle;
+}
+
+button {
+    padding: 11px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#topper {
+    margin: 30px 0 15px;
+    color: #198754;
+    font-size: 22px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 10px;
+}
+
+th {
+    background: #222;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #f5f5f5;
+}
+
+tr:hover {
+    background: #e9ecef;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 20px;
+    }
+
+    input,
+    textarea,
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 7px 4px;
+    }
+}
