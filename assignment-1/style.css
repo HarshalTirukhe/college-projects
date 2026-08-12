@@ -122,3 +122,22 @@ nav a:hover {
 .login-box button:hover {
     background: #142941;
 }
+
+.intro {
+    max-width: 650px;
+    margin: 70px auto 0;
+    padding: 25px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.intro h2 {
+    color: #1e3a5f;
+    margin-bottom: 12px;
+}
+
+.intro p {
+    color: #555;
+    line-height: 1.6;
+}
