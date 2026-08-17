@@ -1,69 +1,91 @@
 let students = [];
 
 function addStudent() {
-  // Get values from input fields
+  // Get input elements
+  let nameInput = document.getElementById("name");
+  let physicsInput = document.getElementById("physics");
+  let chemistryInput = document.getElementById("chemistry");
+  let mathsInput = document.getElementById("maths");
 
-  let name = document.getElementById("name").value;
-
-  let physics = Number(document.getElementById("physics").value);
-
-  let chemistry = Number(document.getElementById("chemistry").value);
-
-  let maths = Number(document.getElementById("maths").value);
+  // Get values
+  let name = nameInput.value.trim();
+  let physics = Number(physicsInput.value);
+  let chemistry = Number(chemistryInput.value);
+  let maths = Number(mathsInput.value);
 
   // Check whether all fields are filled
-
   if (
     name === "" ||
-    document.getElementById("physics").value === "" ||
-    document.getElementById("chemistry").value === "" ||
-    document.getElementById("maths").value === ""
+    physicsInput.value === "" ||
+    chemistryInput.value === "" ||
+    mathsInput.value === ""
   ) {
     alert("Please enter all details");
+    return;
+  }
+
+  // Check whether name already exists
+  let nameExists = students.some(function (student) {
+    return student.name.toLowerCase() === name.toLowerCase();
+  });
+
+  if (nameExists) {
+    alert("Student name already exists");
+    return;
+  }
+
+  // Check whether marks are between 0 and 100
+  if (
+    physics < 0 ||
+    physics > 100 ||
+    chemistry < 0 ||
+    chemistry > 100 ||
+    maths < 0 ||
+    maths > 100
+  ) {
+    alert("Marks must be between 0 and 100");
+
+    clearMarkInputs();
 
     return;
   }
 
-  // Calculate total marks
-
+  // Calculate total
   let total = physics + chemistry + maths;
 
   // Calculate percentage
-
   let percentage = (total / 300) * 100;
 
   // Create student object
-
   let student = {
     name: name,
-
     physics: physics,
-
     chemistry: chemistry,
-
     maths: maths,
-
     total: total,
-
     percentage: percentage,
   };
 
-  // Add student to array
-
+  // Add student
   students.push(student);
 
   // Display students
-
   displayStudents();
 
-  // Clear input fields
+  // Clear inputs
+  clearInputs();
+}
 
-  document.getElementById("name").value = "";
-
+function clearMarkInputs() {
   document.getElementById("physics").value = "";
-
   document.getElementById("chemistry").value = "";
+  document.getElementById("maths").value = "";
+}
 
+function clearInputs() {
+  document.getElementById("name").value = "";
+  document.getElementById("physics").value = "";
+  document.getElementById("chemistry").value = "";
   document.getElementById("maths").value = "";
 }
 

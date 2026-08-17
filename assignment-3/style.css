@@ -11,30 +11,20 @@ body {
     color: #333;
 }
 
+
 h1 {
     text-align: center;
     margin-bottom: 30px;
     color: #222;
 }
 
-input,
-textarea {
+input{
     padding: 10px;
     margin: 5px;
     border: 1px solid #bbb;
     border-radius: 5px;
     font-family: Arial, sans-serif;
-}
-
-input {
     width: 220px;
-}
-
-textarea {
-    width: 130px;
-    height: 45px;
-    resize: none;
-    vertical-align: middle;
 }
 
 button {
