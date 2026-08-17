@@ -8,10 +8,10 @@ git init
 git remote -v
 
 # 4. Add the GitHub remote repository
-git remote add origin https://github.com/harshal-081/vsec.git
+git remote add origin https://github.com/HarshalTirukhe/college-projects
 
 # If "origin already exists" appears, use this instead:
-git remote set-url origin https://github.com/harshal-081/vsec.git
+git remote set-url origin https://github.com/HarshalTirukhe/college-projects
 
 # 5. Fetch files/branches from GitHub
 git fetch origin
@@ -33,7 +33,7 @@ git add .
 git status
 
 # 11. Commit staged files
-git commit -m "Assignment1"
+git commit -m "Assignment-1"
 
 # 12. Pull changes from GitHub
 git pull origin main --no-rebase --allow-unrelated-histories
