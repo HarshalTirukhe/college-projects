@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f2;
+  color: #111;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid #deded8;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.logo span {
+  font-weight: 400;
+}
+
+.badge {
+  font-size: 12px;
+  color: #666;
+  border: 1px solid #d8d8d2;
+  padding: 7px 12px;
+  border-radius: 999px;
+}
+
+.hero {
+  min-height: 650px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #777;
+
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: clamp(64px, 9vw, 110px);
+  line-height: 0.92;
+  letter-spacing: -6px;
+  font-weight: 600;
+}
+
+.description {
+  max-width: 470px;
+
+  margin-top: 30px;
+
+  color: #666;
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+button {
+  width: fit-content;
+
+  margin-top: 30px;
+
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #111;
+  color: white;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid #deded8;
+}
+
+.feature {
+  padding: 24px 0;
+
+  border-right: 1px solid #deded8;
+}
+
+.feature:not(:first-child) {
+  padding-left: 24px;
+}
+
+.feature-number {
+  font-size: 11px;
+  color: #999;
+}
+
+.feature-title {
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+@media (max-width: 700px) {
+
+  .app {
+    padding: 24px;
+  }
+
+  .hero h1 {
+    font-size: 60px;
+    letter-spacing: -3px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .feature {
+    border-right: none;
+    border-bottom: 1px solid #deded8;
+  }
+
+  .feature:not(:first-child) {
+    padding-left: 0;
+  }
+}
