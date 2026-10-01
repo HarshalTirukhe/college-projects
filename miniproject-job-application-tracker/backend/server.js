@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const { MongoClient } = require("mongodb");
+const { MongoClient, ObjectId } = require("mongodb");
 
 const app = express();
 const PORT = 5000;
@@ -26,6 +26,41 @@ app.get("/api/applications", async (req, res) => {
   } catch (error) {
     res.status(500).json({
       message: "Failed to fetch applications",
+    });
+  }
+});
+
+app.put("/api/applications/:id", async (req, res) => {
+  try {
+    const db = client.db(dbName);
+
+    const id = new ObjectId(req.params.id);
+
+    const updatedApplication = {
+      company: req.body.company,
+      position: req.body.position,
+      location: req.body.location,
+      status: req.body.status,
+      appliedDate: req.body.appliedDate,
+    };
+
+    const result = await db.collection("applications").updateOne(
+      { _id: id },
+      { $set: updatedApplication }
+    );
+
+    if (result.matchedCount === 0) {
+      return res.status(404).json({
+        message: "Application not found",
+      });
+    }
+
+    res.json({
+      message: "Application updated successfully",
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Failed to update application",
     });
   }
 });
