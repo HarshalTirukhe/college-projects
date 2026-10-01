@@ -93,6 +93,32 @@ app.post("/api/applications", async (req, res) => {
   }
 });
 
+app.delete("/api/applications/:id", async (req, res) => {
+  try {
+    const db = client.db(dbName);
+
+    const id = new ObjectId(req.params.id);
+
+    const result = await db.collection("applications").deleteOne({
+      _id: id,
+    });
+
+    if (result.deletedCount === 0) {
+      return res.status(404).json({
+        message: "Application not found",
+      });
+    }
+
+    res.json({
+      message: "Application deleted successfully",
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Failed to delete application",
+    });
+  }
+});
+
 async function startServer() {
   await client.connect();
 
