@@ -16,15 +16,19 @@ app.get("/", (req, res) => {
   res.send("Job Application Tracker API is running");
 });
 
-async function startServer() {
-  await client.connect();
+app.get("/api/applications", async (req, res) => {
+  try {
+    const db = client.db(dbName);
 
-  console.log("MongoDB connected");
+    const applications = await db.collection("applications").find().toArray();
 
-  app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-  });
-}
+    res.json(applications);
+  } catch (error) {
+    res.status(500).json({
+      message: "Failed to fetch applications",
+    });
+  }
+});
 
 app.post("/api/applications", async (req, res) => {
   try {
@@ -53,5 +57,15 @@ app.post("/api/applications", async (req, res) => {
     });
   }
 });
+
+async function startServer() {
+  await client.connect();
+
+  console.log("MongoDB connected");
+
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
 
 startServer();
