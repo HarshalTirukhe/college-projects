@@ -26,4 +26,32 @@ async function startServer() {
   });
 }
 
+app.post("/api/applications", async (req, res) => {
+  try {
+    const db = client.db(dbName);
+
+    const application = {
+      company: req.body.company,
+      position: req.body.position,
+      location: req.body.location,
+      status: req.body.status,
+      appliedDate: req.body.appliedDate,
+    };
+
+    const result = await db.collection("applications").insertOne(application);
+
+    res.status(201).json({
+      message: "Application created successfully",
+      application: {
+        _id: result.insertedId,
+        ...application,
+      },
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Failed to create application",
+    });
+  }
+});
+
 startServer();
