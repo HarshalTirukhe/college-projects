@@ -1,45 +1,31 @@
 # College Projects Repository
 
-This repository contains my college web development and practical learning projects, covering frontend development, backend API work, databases, and mini-projects completed during coursework and learning exercises.
-
-## Overview
-
-The projects in this repository include assignments, mini-projects, hackathon work, API development, and frontend practice tasks.
+This repository contains my college web development assignments and mini-projects, covering frontend design, backend APIs, database work, Git practice, and practical learning tasks completed during coursework.
 
 ## Repository Structure
 
-| Folder | Project / Topic | Type |
-|---|---|---|
-| assignment-1 | College event website | Frontend |
-| assignment-2 | Git commands and screenshots practice | Git / Documentation |
-| assignment-3 | Student marks management project | Frontend |
-| assignment-4 | Mini shopping cart using HTML, CSS & JavaScript | Frontend |
-| assignment-5 | Responsive portfolio website | Frontend |
-| assignment-6 | MongoDB command practice | MongoDB / Documentation |
-| assignment-7 | Array and MongoDB CRUD operations | CRUD API |
-| hackathonWebsite | Hackathon website project | Frontend |
-| miniproject-job-application-tracker | Job application tracker mini-project | Full Stack |
-| mongodb-connection | MongoDB connection practice | Database |
-| practiceAnimation | CSS/JavaScript animation practice | Frontend |
-| randomHackFest | Hackfest project | Frontend / Practice |
-| routelab | Route lab project | Frontend |
-| student-management-api | Student management API | Backend |
+| sr.no | Folder                              | Project / Topic                       | Type                |
+| ----- | ----------------------------------- | ------------------------------------- | ------------------- |
+| 1     | assignment-1-A                      | College event website                 | Frontend            |
+| 2     | assignment-1-B                      | windows styled animation              | Frontend            |
+| 3     | assignment-2                        | Git commands and screenshots practice | Git / Documentation |
+| 4     | assignment-3-A                      | Student marks management project      | Frontend            |
+| 5     | assignment-3-B                      | Mini shopping cart project            | Frontend            |
+| 6     | assignment-4                        | MongoDB command practice              | Database            |
+| 7     | assignment-5-A                      | Array CRUD operations                 | CRUD-API            |
+| 8     | assignment-5-B                      | MongoDB CRUD operations               | CRUD-API            |
+| 9     | assignment-6                        | React-counter                         | React               |
+| 10    | assignment-7                        | React-router pratice                  | React               |
+| 11    | assignment-8                        | React-focus timer                     | React               |
+| 12    | miniproject-job-application-tracker | Job application tracker mini-project  | Full-stack          |
 
 ## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
-- Bootstrap / Responsive Design
+- React
 - Node.js
 - Express.js
 - MongoDB
 - Git & GitHub
-
-## Notes
-
-- Some folders are college assignments and practice tasks.
-
-## Goal
-
-This repository is used to document and organize college projects, improve frontend/backend skills, and track practical learning progress.
