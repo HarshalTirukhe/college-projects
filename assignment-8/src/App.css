@@ -1,0 +1,134 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0b1120;
+  color: #f8fafc;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.timer-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 42px 32px;
+  text-align: center;
+  background: linear-gradient(145deg, #172238, #111827);
+  border: 1px solid #293750;
+  border-radius: 28px;
+  box-shadow: 0 25px 70px #00000040;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+.mode-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mode-buttons button {
+  padding: 11px 16px;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  background: #1e293b;
+  color: #cbd5e1;
+}
+
+.mode-buttons button.active {
+  background: #2563eb;
+  border-color: #3b82f6;
+  color: white;
+}
+
+.timer {
+  margin: 32px 0;
+  font-size: clamp(5rem, 17vw, 8rem);
+  font-weight: 800;
+  letter-spacing: -4px;
+  font-variant-numeric: tabular-nums;
+  color: #60a5fa;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.controls button {
+  min-width: 130px;
+  padding: 15px 24px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.controls button:hover {
+  transform: translateY(-2px);
+}
+
+.start-button {
+  background: #2563eb;
+  color: white;
+}
+
+.start-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.reset-button {
+  background: #334155;
+  color: white;
+}
+
+.sessions {
+  margin-top: 30px;
+  color: #94a3b8;
+}
+
+.sessions strong {
+  color: #f8fafc;
+}
+
+@media (max-width: 480px) {
+  .timer-card {
+    padding: 32px 18px;
+  }
+
+  .controls button {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .timer {
+    letter-spacing: -2px;
+  }
+}
